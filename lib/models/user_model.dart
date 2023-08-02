@@ -13,7 +13,7 @@ String userModelToJson(List<UserModel> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class UserModel {
-  String? id;
+  int? id;
   String? name;
   String? username;
   String? email;

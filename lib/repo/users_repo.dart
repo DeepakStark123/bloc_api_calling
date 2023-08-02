@@ -5,7 +5,7 @@ import 'package:my_bloc_demo/models/user_model.dart';
 class UserRepo {
   final dio = Dio();
   // var res = await http.get(Uri.parse("https://jsonplaceholder.typicode.com/users"));
-  getUsers() async {
+  Future<List<UserModel>> getUsers() async {
     final res = await dio.get("https://jsonplaceholder.typicode.com/users");
     debugPrint('response = ${res.data}');
     if (res.statusCode == 200) {
