@@ -13,7 +13,7 @@ String userModelToJson(List<UserModel> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class UserModel {
-  int? id;
+  String? id;
   String? name;
   String? username;
   String? email;
@@ -47,7 +47,7 @@ class UserModel {
       );
 
   Map<String, dynamic> toJson() => {
-        "id": id,
+        "id": id ?? '0',
         "name": name,
         "username": username,
         "email": email,
